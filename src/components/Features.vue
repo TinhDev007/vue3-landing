@@ -35,9 +35,9 @@ const featureList = ref([
 </script>
 
 <template>
-  <div>
-    <h3>We Provides best Feature for customar</h3>
-    <div>
+  <div class="container mx-auto">
+    <h3 class="text-center">We Provides best Feature for customar</h3>
+    <div class="grid grid-cols-4 gap-4">
       <div v-for="(featureItem, index) in featureList" :key="index">
         <div>
           <img :src="featureItem.icon" alt="" />
@@ -50,6 +50,6 @@ const featureList = ref([
         </div>
         <IconCircleArrow />
       </div>
-    </div>
+    </div>    
   </div>
 </template>
