@@ -30,19 +30,21 @@ const operatingSystems = ref([
 
 <template>
   <section class="operating-system-section">
-    <div>
-      <img :src="LeftImage" alt="" />
-    </div>
-    <div class="">
-      <h3>It’s helpful for operating system</h3>
-      <div v-for="(operatinSystem, index) in operatingSystems" :key="index">
-        <div>
-          <ArrowIcon :color="operatinSystem.iconColor" />
-          <h5>{{ operatinSystem.title }}</h5>
+    <div class="container mx-auto grid grid-cols-2 gap-4">
+      <div>
+        <img :src="LeftImage" alt="" />
+      </div>
+      <div>
+        <h3>It’s helpful for operating system</h3>
+        <div v-for="(operatinSystem, index) in operatingSystems" :key="index">
+          <div>
+            <ArrowIcon :color="operatinSystem.iconColor" />
+            <h5>{{ operatinSystem.title }}</h5>
+          </div>
+          <p>
+            {{ operatinSystem.description }}
+          </p>
         </div>
-        <p>
-          {{ operatinSystem.description }}
-        </p>
       </div>
     </div>
   </section>

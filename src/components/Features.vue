@@ -35,21 +35,29 @@ const featureList = ref([
 </script>
 
 <template>
-  <div class="container mx-auto">
-    <h3 class="text-center">We Provides best Feature for customar</h3>
-    <div class="grid grid-cols-4 gap-4">
-      <div v-for="(featureItem, index) in featureList" :key="index">
-        <div>
-          <img :src="featureItem.icon" alt="" />
+  <section>
+    <div class="container mx-auto">
+      <h3 class="text-center max-w-[549px] mx-auto mb-[60px] text-[44px] font-bold leading-[130%]">
+        We Provides best Feature for customers
+      </h3>
+      <div class="grid grid-cols-4 gap-4">
+        <div
+          class="flex flex-col items-center text-center max-w-[263px] mx-auto shadow-[0_6px_50px_5px_rgba(6,14,26,0.05)] p-10"
+          v-for="(featureItem, index) in featureList"
+          :key="index"
+        >
+          <div class="mb-[50px]">
+            <img :src="featureItem.icon" alt="" />
+          </div>
+          <div>
+            <h5>{{ featureItem.title }}</h5>
+            <p>
+              {{ featureItem.description }}
+            </p>
+          </div>
+          <IconCircleArrow />
         </div>
-        <div>
-          <h5>{{ featureItem.title }}</h5>
-          <p>
-            {{ featureItem.description }}
-          </p>
-        </div>
-        <IconCircleArrow />
       </div>
-    </div>    
-  </div>
+    </div>
+  </section>
 </template>
