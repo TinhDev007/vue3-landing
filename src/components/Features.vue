@@ -35,8 +35,8 @@ const featureList = ref([
 </script>
 
 <template>
-  <section>
-    <div class="container mx-auto">
+  <section class="p-10">
+    <div class="max-w-[1140px] mx-auto">
       <h3 class="text-center max-w-[549px] mx-auto mb-[60px] text-[44px] font-bold leading-[130%]">
         We Provides best Feature for customers
       </h3>
